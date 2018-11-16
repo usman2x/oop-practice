@@ -1,19 +1,19 @@
 package practice.design.patterns.decorator;
 
-public class SpecialPacking implements Package {
+public abstract class SpecialPacking implements Package {
     private Package aPackage;
 
-    public void setaPackage(Package aPackage) {
+    public void setPackage(Package aPackage) {
         this.aPackage = aPackage;
     }
 
     @Override
-    public String retrievePackageMaterial(int quantity) {
-        return aPackage.retrievePackageMaterial(quantity);
+    public int retrievePackageQuantity() {
+        return aPackage.retrievePackageQuantity();
     }
 
     @Override
-    public void pack() {
-        aPackage.pack();
+    public void pack(int quantity) {
+        aPackage.pack(quantity);
     }
 }
