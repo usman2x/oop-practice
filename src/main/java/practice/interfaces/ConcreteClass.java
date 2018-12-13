@@ -3,11 +3,13 @@ package practice.interfaces;
 public class ConcreteClass implements Interface1, Interface2 {
 
     public static void main(String[] args) {
+        IList<String> stringIList = new ListSetImpl();
+        stringIList.add("Hello");
 //        ConcreteClass concreteClass = new ConcreteClass();
 //        concreteClass.print();
 //        MyEnum day = MyEnum.FRIDAY;
 //        System.out.println(day);
-        System.out.println("final Result " + getResult(2,0));
+//        System.out.println("final Result " + getResult(2,0));
     }
 
     @Override
